@@ -8,15 +8,17 @@
 body, html {
     height: 100%;
     animation: changeBackground 50s infinite;
+    /* background-image: url("img/kinhdo3.webp"); */
     background-size: cover;
     background-position: center;
 }
 
     @keyframes changeBackground {
         0% { background-image: url("img/kinhdo3.webp"); }
-        25% { background-image: url("img/caurong.jpg"); }
-        50% { background-image: url("img/QuangBinh.jpg"); }
-        75% { background-image: url("img/QuocTuGiam.jpg"); }
+        20% { background-image: url("img/caurong.jpg"); }
+        40% { background-image: url("img/QuangBinh.jpg"); }
+        60% { background-image: url("img/KVC.jpeg"); }
+        80% { background-image: url("img/BuuDienHCM.jpg"); }
         100% { background-image: url("img/kinhdo3.webp"); }
     }
 
@@ -25,11 +27,12 @@ body, html {
     display: flex; 
     flex-direction: column; 
     align-items: center;
-    gap: 20px;
+    gap: 0px;
     height: 100vh;
     position: absolute;
     top: 20px;
-    left: 35%;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 
 .hinh-anh img {
@@ -37,11 +40,11 @@ body, html {
     height: auto;
 }
 .hinh-anh img:first-child {
-    width: 700px; 
+    width: 500px; 
 }
 
 .hinh-anh img:last-child {
-    width: 400px;
+    width: 250px;
 }
 .gif2025 {
     opacity: 1;
@@ -142,7 +145,7 @@ body, html {
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
-    font-size: 30px;
+    font-size: 15px;
     text-align: center;
     display: flex;
     align-items: center;
