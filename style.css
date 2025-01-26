@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body, html {
+    height: 100%;
+    animation: changeBackground 50s infinite;
+    background-size: cover;
+    background-position: center;
+}
+
+    @keyframes changeBackground {
+        0% { background-image: url("img/kinhdo3.webp"); }
+        25% { background-image: url("img/caurong.jpg"); }
+        50% { background-image: url("img/QuangBinh.jpg"); }
+        75% { background-image: url("img/QuocTuGiam.jpg"); }
+        100% { background-image: url("img/kinhdo3.webp"); }
+    }
+
+
+.hinh-anh {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+    position: absolute;
+    top: 20px;
+    left: 35%;
+}
+
+.hinh-anh img {
+    max-width: 100%;
+    height: auto;
+}
+.hinh-anh img:first-child {
+    width: 700px; 
+}
+
+.hinh-anh img:last-child {
+    width: 400px;
+}
+.gif2025 {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.gif2025.show {
+    opacity: 0;
+    pointer-events: none; 
+}
+.card{
+    width: 640px;
+    height: 425px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    pointer-events: none;
+}
+.card.show {
+    /* display: flex; */
+    transform: translateY(0);
+    opacity: 1;
+    transition: 1s;
+    pointer-events: auto;
+}
+
+.card:hover{
+    transform: translateY(-150%);
+    transform: rotate(-5deg);
+}
+.card:hover .outside{
+    transform: translateY(-150%);
+    transform: rotateY(-130deg);
+}
+
+.outside, .inside{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 50.1%;
+}
+
+.inside{
+    background: linear-gradient(to right, #e0e0e0, #ffffff 30%);
+    line-height: 3;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    left: 50%;
+}
+.outside{
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 1;
+    transform-origin: left;
+    transition: 1.5s;
+}
+
+.front, .back{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+}
+.front{
+    background-image: url("img/bia.jpg");
+    background-size: 96%;
+}
+.back{
+    transform: rotateY(180deg);
+    background-color: #e0e0e0;
+    /* background: linear-gradient(to left, #e0e0e0, #ffffff 30%); */
+    background-image: url("img/ran.png");
+    background-size: 90% 95%;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}

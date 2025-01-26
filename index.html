@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"/>
+    <link rel="stylesheet" href="style.css"/>
+    <title>Fireworks</title>
+    <style>
+        *{
+            margin: 0;
+        }
+
+        section{
+            height: 100vh;
+            width: 100%;
+            /* background-image: url("img/kinhdo3.webp");
+            background-size: cover;
+            background-position: center; */
+        }
+    </style>
+</head>
+<body>
+    <section></section>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="jquery.fireworks.js"></script>
+    <script>
+        $('section').fireworks({ 
+            sound: false, // sound effect
+            opacity: 0.9, 
+            width: '100%', 
+            height: '100%' 
+        });
+    </script>
+    <div class="hinh-anh">
+        <img src="img/hny.png" alt="Happy New Year"/>
+        <img src="img/2025.gif" alt="2025" class="gif2025">
+    </div>
+    
+    <button class="button" id="showButton">Click vào đây!</button>
+    <div class="card" id="contentBox">
+        <div class="outside">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="inside">
+            <p>
+                Chả biết nói gì ngoài happy birthday.
+            </p>
+
+            <button class="button2" id="closeButton"> Quay lại xem pháo hoa nào! </button>
+        </div>
+    </div>
+    <script>
+        const showButton = document.getElementById('showButton');
+        const contentBox = document.getElementById('contentBox');
+        const closeButton = document.getElementById('closeButton');
+
+        showButton.addEventListener('click', () => {
+            if (contentBox.classList.contains('show')) {
+                contentBox.classList.remove('show');
+                // document.querySelector('.gif2025').classList.remove('show');
+            } else {
+                contentBox.classList.add('show');
+                document.querySelector('.gif2025').classList.add('show');
+            }
+        });
+        closeButton.addEventListener('click', () => {
+            if (contentBox.classList.contains('show')) {
+                contentBox.classList.remove('show');
+                // document.querySelector('.gif2025').classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
