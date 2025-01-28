@@ -5,8 +5,10 @@
     font-family: "Poppins", sans-serif;
 }
 
-body, html {
-    height: 100%;
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
     animation: changeBackground 50s infinite;
     /* background-image: url("img/kinhdo3.webp"); */
     background-size: cover;
@@ -28,23 +30,20 @@ body, html {
     flex-direction: column; 
     align-items: center;
     gap: 0px;
-    height: 100vh;
+    width: 33%;
     position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translate(-50%, 0%);
 }
 
 .hinh-anh img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 .hinh-anh img:first-child {
-    width: 500px; 
+    width: 100%; 
 }
 
 .hinh-anh img:last-child {
-    width: 250px;
+    width: 50%;
 }
 .gif2025 {
     opacity: 1;
@@ -59,20 +58,19 @@ body, html {
     width: 640px;
     height: 425px;
     position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    /* display: flex;
+    align-items: center; */
+    bottom: 150px;
     -webkit-perspective: 1200px;
     perspective: 1200px;
-    transform: translateY(50%);
+    transform: translateY(60%) scale(0.5);
     opacity: 0;
     transition: transform 0.5s ease, opacity 0.5s ease;
     pointer-events: none;
 }
 .card.show {
-    /* display: flex; */
+    /* display: flex;
+    align-items: center; */
     transform: translateY(0);
     opacity: 1;
     transition: 1s;
@@ -142,11 +140,15 @@ body, html {
     border-radius: 5px;
     position: absolute;
     bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
     cursor: pointer;
     font-size: 15px;
     text-align: center;
-    display: flex;
-    align-items: center;
+    transition: transform 0.5s ease;
+}
+.button2{
+    /* background-color: navajowhite; */
+    border: none;
+}
+.scaling{
+    transform: scale(1.5);
 }
